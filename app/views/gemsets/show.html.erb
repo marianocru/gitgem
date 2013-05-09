@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Proyecto:</b>
+  <%= @gemset.proyecto.nombre %>
+</p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @gemset.nombre %>
+</p>
+
+<%= link_to 'Nueva Version', {:controller=>"gemsets", :action =>'alta_version', :id=>@gemset.id }, :remote=> true %>
+<br /><br /><br />
+<div id="form_version"></div>
+<legend>Listado de Versiones</legend>
+<div id="versions">
+  <%= render "versions/listado_versions" %>
+</div>
+<br /><br />
+<%= link_to 'Edit', edit_gemset_path(@gemset) %> |
+<%= link_to 'Back', proyectos_path + '/' +@gemset.proyecto_id.to_s %>

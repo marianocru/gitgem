@@ -1,0 +1,21 @@
+<%= form_for(@gemset) do |f| %>
+  <% if @gemset.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gemset.errors.count, "error") %> prohibited this gemset from being saved:</h2>
+
+      <ul>
+      <% @gemset.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<%= f.hidden_field :proyecto_id, :value=> @proyecto.id %>
+  <div class="field">
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

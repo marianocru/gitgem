@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  gemset_id: 1
+  numero_version: 1
+  revision: 1
+
+two:
+  gemset_id: 1
+  numero_version: 1
+  revision: 1

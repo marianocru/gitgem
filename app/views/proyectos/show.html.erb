@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Usuario:</b>
+  <%= @proyecto.usuario_id %>
+</p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @proyecto.nombre %>
+</p>
+
+<p>
+  <b>Descripcion:</b>
+  <%= @proyecto.descripcion %>
+</p>
+
+<%= link_to 'Subir Gemset', {:controller=>"proyectos", :action =>'alta_gemset', :id=>@proyecto.id }, :remote=> true %>
+<br /><br /><br />
+<div id="form_gemset"></div>
+<legend>Listado de Gemset</legend>
+<div id="gemsets">
+  <%= render "gemsets/listado_gemsets" %>
+</div>
+<br /><br />
+<%= link_to 'Edit', edit_proyecto_path(@proyecto) %> |
+<%= link_to 'Back', proyectos_path %>

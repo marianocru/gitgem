@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Gemset:</b>
+  <%= @version.gemset.nombre %>
+</p>
+
+<p>
+  <b>Version:</b>
+  <%= @version.numero_version %>
+</p>
+
+<p>
+  <b>Revision:</b>
+  <%= @version.revision %>
+</p>
+
+
+<%= link_to 'Edit', edit_version_path(@version) %> |
+<%= link_to 'Back', gemsets_path + '/' +@version.gemset_id.to_s %>
